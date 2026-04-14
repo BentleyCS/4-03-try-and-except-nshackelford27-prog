@@ -4,20 +4,32 @@
 
 def sum(arr : list) -> int:
     """
-    Modify the function such that it returns the sum of all numebrs within the given list.
+    Modify the function such that it returns the sum of all numbers within the given list.
     :param arr:
     :return:
     """
-    pass
+    z = 0
+    for i in arr:
+        try:
+            z = z + i
+        except:
+            pass
+    return z
 
-def cleanData(rawData : list) ->list:
+def cleanData(rawData : list) -> list:
     """
     modify the function such that it takes in a list as an argument will return a new list that
-     contains only the valeus that can be typecast to a float.
+     contains only the values that can be typecast to a float.
     :param rawData:
     :return:
     """
-    pass
+    z = []
+    for i in rawData:
+        try:
+            z = z + [float(i)]
+        except:
+            pass
+    return z
 def unreliableCalculator(divisors : list) -> list:
     """
     Modify the function such that it takes in a list as an argument and returns a new list where each
@@ -27,22 +39,32 @@ def unreliableCalculator(divisors : list) -> list:
     :param divisors:
     :return:
     """
-    pass
+    z = []
+    for i in divisors:
+        try:
+            z = z + [100 / (i)]
+        except Exception as skib:
+            z = z + [skib.__class__.__name__]
+
+
+    return z
 
 
 def upperAll(arr : list) -> None:
     """
     Modiy the function such that is uppercases all strings within the given argument list.
-    The string method .upper() turns all characters in as tirng uppercase.
-    You should mpdify the original list not return a new list.
+    The string method .upper() turns all characters in as string uppercase.
+    You should modify the original list not return a new list.
     :param arr:
     :return:
     """
-    x = "hello"
-    print(x)
-    x = x.upper()
-    print(x)
 
+    for i in range(len(arr)):
+       try:
+           arr[i] = arr[i].upper()
+       except:
+           pass
+    return
 
 def firstItems(arr : list) -> list:
     """
@@ -54,5 +76,16 @@ def firstItems(arr : list) -> list:
     :param arr:
     :return:
     """
-    pass
+
+    z = []
+    for i in arr:
+        try:
+            z = z + [i[0]]
+        except:
+            z = z + [i]
+    return z
+
+
+
+
 
